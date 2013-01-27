@@ -1,4 +1,26 @@
-This gem provides a simple patch that allows you to set transient (non-db-backed) model attributes from multiparameter attribute groups (like those passed by date/time select form elements).  For example, let's say you have a class "Employee" and you have added a transient "enrollment_time" attribute to it (perhaps so that you can cleanly place separate date and time inputs in your form).  If you have your model definition is as follows:
+About
+=====
+
+This gem provides a simple patch that allows you to set transient (non-db-backed) model attributes from multiparameter attribute groups (like those passed by date/time select form elements).  
+
+Usage
+=====
+
+Add the following to your Gemfile:
+    gem 'multiparameter_assignable_attr'
+
+and run 'bundle install' (or just 'bundle')
+    $ bundle
+
+That's it, you can now mark transient atributes as multiparameter-assignable with the following macro:
+
+    multiparameter_assignable_attr :attribute_name => AttributeClass
+
+See below for more info and examples.
+
+More Info
+=========
+Let's say you have a class "Employee" and you have added a transient "enrollment_time" attribute to it (perhaps so that you can cleanly place separate date and time inputs in your form).  If you have your model definition is as follows:
 
     class Member
       attr_accessible :name, :email, :enrollment_date
