@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["nzaillian"]
   s.email       = ["nzaillian@gmail.com"]
   s.homepage    = "https://github.com/nzaillian/multiparameter_assignable_attr"
-  s.summary     = "Patch for multiparameter-wise assignment of transient (non-db-backed) model attributes."
-  s.description = "Patch for multiparameter-wise assignment of transient (non-db-backed) model attributes."
+  s.summary     = "Patch for multiparameter-wise assignment of transient (non-db-backed) model attributes in Rails' (Active Record)."
+  s.description = "Patch for multiparameter-wise assignment of transient (non-db-backed) model attributes in Rails' (Active Record)."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
