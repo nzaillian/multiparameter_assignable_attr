@@ -14,7 +14,7 @@ and run 'bundle install' (or just 'bundle')
     
     $ bundle
 
-That's it, you can now mark transient atributes as multiparameter-assignable with the following macro:
+That's it, you can now mark transient attributes as multiparameter-assignable with the following macro:
 
     multiparameter_assignable_attr :attribute_name => AttributeClass
 
