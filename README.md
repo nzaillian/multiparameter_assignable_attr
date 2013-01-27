@@ -7,9 +7,11 @@ Usage
 =====
 
 Add the following to your Gemfile:
+    
     gem 'multiparameter_assignable_attr'
 
 and run 'bundle install' (or just 'bundle')
+    
     $ bundle
 
 That's it, you can now mark transient atributes as multiparameter-assignable with the following macro:
