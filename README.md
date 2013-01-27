@@ -20,7 +20,7 @@ See below for more info and examples.
 
 More Info
 =========
-Let's say you have a class "Employee" and you have added a transient "enrollment_time" attribute to it (perhaps so that you can cleanly place separate date and time inputs in your form).  If you have your model definition is as follows:
+Let's say you have a class "Member" and you have added a transient "enrollment_time" attribute to it (perhaps so that you can cleanly place separate date and time inputs in your form).  If you have your model definition is as follows:
 
     class Member
       attr_accessible :name, :email, :enrollment_date
