@@ -35,7 +35,7 @@ Let's say you have a class "Member" and you have added a transient "enrollment_t
 
       def merge_enrollment_date_and_time
         if enrollment_time
-          self.enrollment_date = self.enrollment_date.change(
+          self.enrollment_date = enrollment_date.change(
             :hour => enrollment_time.hour,
             :min => enrollment_time.min
           )
@@ -112,7 +112,7 @@ This patch just overrides the default implementation of ActiveRecord.reflect\_on
 
       def merge_enrollment_date_and_time
         if enrollment_time
-          self.enrollment_date = self.enrollment_date.change(
+          self.enrollment_date = enrollment_date.change(
             :hour => enrollment_time.hour,
             :min => enrollment_time.min
           )
