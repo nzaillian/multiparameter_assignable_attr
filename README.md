@@ -24,7 +24,7 @@ More Info
 =========
 Let's say you have a class "Member" and you have added a transient "enrollment_time" attribute to it (perhaps so that you can cleanly place separate date and time inputs in a form for the model).  If you have your model definition as follows:
 
-    class Member
+    class Member < ActiveRecord::Base
       attr_accessible :name, :email, :enrollment_date, :enrollment_time
 
       attr_accessor :enrollment_time
@@ -101,7 +101,7 @@ This error occurs because the value for the transient "start\_time" attribute is
 This patch just overrides the default implementation of ActiveRecord.reflect\_on\_aggregation to return the appropriate class for indicated transient attributes instead of nil (and defer to super for the other attributes).  To use it, we would update our class definition to use the multiparameter\_assignable\_attr macro:
 
 
-    class Member
+    class Member < ActiveRecord::Base
       attr_accessible :name, :email, :enrollment_date, :enrollment_time
 
       multiparameter_assignable_attr :enrollment_time => DateTime
