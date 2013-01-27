@@ -25,7 +25,7 @@ More Info
 Let's say you have a class "Member" and you have added a transient "enrollment_time" attribute to it (perhaps so that you can cleanly place separate date and time inputs in a form for the model).  If you have your model definition as follows:
 
     class Member
-      attr_accessible :name, :email, :enrollment_date
+      attr_accessible :name, :email, :enrollment_date, :enrollment_time
 
       attr_accessor :enrollment_time
 
@@ -102,7 +102,7 @@ This patch just overrides the default implementation of ActiveRecord.reflect\_on
 
 
     class Member
-      attr_accessible :name, :email, :enrollment_date
+      attr_accessible :name, :email, :enrollment_date, :enrollment_time
 
       multiparameter_assignable_attr :enrollment_time => DateTime
 
