@@ -13,7 +13,7 @@ module ActiveRecordExt
           @@multiparameter_assignable_attribute_mappings[self].merge!(attr_mappings)
 
           code = <<-CODE
-            attr_accessor :#{attr_mappings.keys.join(', ')}
+            attr_accessor #{attr_mappings.keys.map{|k| ":#{k}"}.join(", ")}
 
             def self.reflect_on_aggregation(attr_name)
               if @@multiparameter_assignable_attribute_mappings[self].keys.include?(attr_name)
