@@ -1,7 +1,7 @@
 About
 =====
 
-This gem provides a simple patch that allows you to set transient (non-db-backed) model attributes from multiparameter attribute groups (like those passed by date/time select form elements).  
+This gem provides a simple patch that allows you to set transient (non-db-backed) model attributes from multiparameter attribute groups (like those passed by date/time select form elements) in Rails.  
 
 Usage
 =====
